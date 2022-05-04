@@ -42,14 +42,14 @@ my_cur = my_cnx.cursor()
 #my_data_row = my_cur.fetchone()
 #streamlit.text("Hello from snowflake")
 #streamlit.text(my_data_row)
-my_cur.execute("select fruit_name from fruit_load_list")
+my_cur.execute("select 1 as fruit_name from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 #my_f_list = my_data_rows.set_index('fruit_name');
 add_my_fruit = streamlit.multiselect("Pick some fruits:", list(my_data_rows))
-fruit_added_show = my_data_rows.loc[add_my_fruit]
+#fruit_added_show = my_data_rows.loc[add_my_fruit]
 streamlit.write('Thanks for adding fruit')
 
 
