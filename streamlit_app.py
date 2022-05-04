@@ -49,4 +49,10 @@ streamlit.dataframe(my_data_rows)
 
 #my_f_list = my_data_rows.set_index('fruit_name');
 add_my_fruit = streamlit.multiselect("Pick some fruits:", list(my_data_rows))
+fruit_added_2_show = my_data_rows.loc[add_my_fruit]
 streamlit.write('Thanks for adding fruit',add_my_fruit)
+
+streamlit.write('2')
+streamlit.dataframe(add_my_fruit)
+streamlit.write('3')
+streamlit.dataframe(fruit_added_2_show)
