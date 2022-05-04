@@ -47,5 +47,5 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-my_data_rows = my_data_rows.set_index('fruit_name');
-streamlit.multiselect("Pick some fruits:", list(my_data_rows.index))
+my_f_list = my_data_rows.set_index('fruit_name');
+streamlit.multiselect("Pick some fruits:", list(my_data_rows))
