@@ -69,5 +69,5 @@ if streamlit.button('Add a Fruit to the list'):
    streamlit.text(back_from_function)
    
 streamlit.write('Thanks for adding fruit', add_my_fruit)
-streamlit.dataframe(add_my_fruit)
+#streamlit.dataframe(add_my_fruit)
 streamlit.stop()
